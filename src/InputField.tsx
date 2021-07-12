@@ -66,13 +66,13 @@ const InputField: React.FC<IProps> = (props: IProps) => {
 
   const onChangeTextCallback = useCallback(
     (text: string) => {
-      const numbersFromText = text.replace(NON_NUMBER_REGEX, "");
-      const codeChanged = numbersFromText !== value;
+      text = text.toUpperCase();
+      const codeChanged = text !== value;
       if (onChangeText) {
-        onChangeText(numbersFromText);
+        onChangeText(text);
       }
       if (codeChanged) {
-        if (numbersFromText.length === codeMaxLength) {
+        if (text.length === codeMaxLength) {
           Keyboard.dismiss();
         }
       }
@@ -98,7 +98,6 @@ const InputField: React.FC<IProps> = (props: IProps) => {
     <TextInput
       autoFocus={autoFocus || true}
       caretHidden={true}
-      keyboardType="number-pad"
       onBlur={onBlurCallback}
       onChangeText={onChangeTextCallback}
       maxLength={codeMaxLength}

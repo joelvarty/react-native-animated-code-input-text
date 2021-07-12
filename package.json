@@ -1,8 +1,8 @@
 {
-  "name": "@brainsbeards/react-native-animated-code-input",
+  "name": "react-native-animated-code-input-text",
   "author": "Brains and Beards",
-  "version": "1.0.1",
-  "homepage": "https://github.com/brains-and-beards/react-native-animated-code-input",
+  "version": "1.0.2",
+  "homepage": "https://github.com/joelvarty/react-native-animated-code-input-text",
   "description": "Animated code input component for React Native, with support for iOS, Android, and React Native Web. It works with one-time code autofill on iOS and Android.",
   "license": "MIT",
   "main": "./lib/index.js",
